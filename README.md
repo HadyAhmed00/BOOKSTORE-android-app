@@ -2,7 +2,7 @@
 android app for the android workshop presented by support 
 the app uses :
 
-#1-Recycler view
+1-Recycler view
 
 2-SQLite database 
 
