@@ -53,5 +53,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:title="Delete book from faveruete " />
+        app:title="Delete book from Favourite  " />
 </androidx.constraintlayout.widget.ConstraintLayout>

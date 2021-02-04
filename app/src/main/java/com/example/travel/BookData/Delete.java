@@ -46,7 +46,7 @@ public class Delete extends AppCompatActivity {
             boolean b = linkDatabase.delete(linkModel);
             Toast.makeText(getBaseContext(),name +" Book Is Deleted Successfully ",Toast.LENGTH_SHORT).show();
         } catch (Exception e) {
-            Toast.makeText(getBaseContext(), name+ " Book Is Not Exist", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getBaseContext(), name+ " Book Does Not Exist", Toast.LENGTH_SHORT).show();
         }
 
     }
