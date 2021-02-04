@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    android:orientation="vertical"
+    tools:context=".HomeList.Home">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/home_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/orange"
+        android:drawableStart="@drawable/email_icon"
+        android:drawableLeft="@drawable/email_icon"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:title="@string/app_name"
+        app:titleTextColor="@color/blue" />
+
+
+    <ImageView
+        android:id="@+id/home_page_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="193dp"
+        android:padding="20dp"
+        app:srcCompat="@drawable/ic_png" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/reclist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/home_list_card" />
+</LinearLayout>
