@@ -1,14 +1,17 @@
 package com.example.travel.ShowList;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.widget.SearchView;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -35,6 +38,8 @@ public class ShowList extends AppCompatActivity implements ShowListAdapter.onles
 
     public static   ShowListModel curnt_Trip;
 
+
+
     ShowListAdapter adapter;
 
     public SearchView searchView;
@@ -42,13 +47,17 @@ public class ShowList extends AppCompatActivity implements ShowListAdapter.onles
     public static void setUrl(String url) {
         ShowList.url = url;
     }
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
+
         searchView=findViewById(R.id.search);
         requestQueue = Volley.newRequestQueue(this);
         curnt_Trip = new ShowListModel();
+
+
         RecyclerView rv;
         rv = findViewById(R.id.rv);
         adapter = new ShowListAdapter(data, this);

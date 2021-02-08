@@ -17,8 +17,9 @@
         android:drawableLeft="@drawable/email_icon"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
+        app:logo="@drawable/ic_home_white"
         app:title="@string/app_name"
-        app:titleTextColor="@color/blue" />
+        app:titleTextColor="@color/white" />
 
 
     <ImageView

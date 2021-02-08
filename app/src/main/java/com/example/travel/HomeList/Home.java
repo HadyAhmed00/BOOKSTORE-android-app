@@ -1,6 +1,7 @@
 package com.example.travel.HomeList;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 
 import com.example.travel.BookData.BookDatabase;
@@ -12,20 +13,23 @@ import com.example.travel.ShowList.ShowList;
 import com.example.travel.ShowList.ShowListModel;
 import com.example.travel.Users.SignIn;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import java.util.ArrayList;
+
+import static com.example.travel.R.string.titel;
 
 public class Home extends AppCompatActivity implements HomeListAdapter.onhomelisner {
     public static boolean fave;
     private LinkDatabase linkDatabase;
     private BookDatabase bookDatabase;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +53,7 @@ public class Home extends AppCompatActivity implements HomeListAdapter.onhomelis
 
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     public void onhomeclik(int pos) {
         Intent intent;
@@ -70,7 +75,7 @@ public class Home extends AppCompatActivity implements HomeListAdapter.onhomelis
         else if (pos==2){
             ShowList.data.clear();
             fave=false;
-            ShowList.setUrl("https://run.mocky.io/v3/a1f58cce-5dc9-44e7-a5a8-1daa0824250e");
+             ShowList.setUrl("https://run.mocky.io/v3/a1f58cce-5dc9-44e7-a5a8-1daa0824250e");
             intent = new Intent(this, ShowList.class);
             startActivity(intent);
 
