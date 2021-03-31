@@ -1,6 +1,6 @@
 # BOOKSTORE
 ![Banner](https://github.com/HadyAhmed00/BOOKSTORE-android-app/blob/master/readme_pic/logo.jpg)
-android app for the android workshop presented by support  
+* android app for the android workshop presented by support  
 
 ## uses:
 1. Java , XTML
